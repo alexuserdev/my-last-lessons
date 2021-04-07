@@ -1,5 +1,21 @@
-$bgcolor: orange;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400&display=swap');
 
+// === Mixin ===
+@mixin Heebo {
+    font-family: 'Heebo', sans-serif;
+}
+// === / Mixin ===
+
+// === Variables ===
+$fw-thin:200;
+$fw-regular:300;
+$fw-bold:400;
+$bg-color: rgba(#12181E, 0.8);
+// === / Variables ===
+
+// === Common ===
 body {
     background-color: $bgcolor;
 }
+// === / Common ===
+ 
