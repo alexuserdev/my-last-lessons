@@ -4,12 +4,13 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -22px;
   left: 25px;
   height: 40px;
   width: 40px;
   border: 3px solid #FFFFFF;
-  border-radius: 100px; }
+  border-radius: 100px;
+  padding: 20px; }
 
 body {
   background-color: rgba(18, 24, 30, 0.8);
@@ -40,7 +41,8 @@ h4 {
 p {
   font-size: 13px;
   color: #67859E;
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
 
 a {
   font-size: 13px;
@@ -59,7 +61,8 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 8px; }
+  border-radius: 8px;
+  margin-bottom: 17px; }
 
 .close {
   position: absolute;
@@ -102,7 +105,8 @@ button {
   display: flex;
   flex-flow: nowrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0px 0 33px 0; }
 
 .card, .lite, .basic, .team, .pro {
   width: 206px;
@@ -116,33 +120,53 @@ button {
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  padding: 21px;
-  margin: 0px 5px; }
+  padding: 25px;
+  margin: 0 5px; }
+  .card:before, .lite:before, .basic:before, .team:before, .pro:before {
+    content: ' ';
+    position: inherit;
+    top: 87px;
+    left: 68px;
+    height: 202px;
+    width: 2px;
+    background-color: #fff;
+    transform: rotate(90deg);
+    background: #2C405A; }
   .card h3, .lite h3, .basic h3, .team h3, .pro h3 {
     display: inline;
     justify-content: flex-start;
     top: 15px;
     left: 34px;
-    margin: 71px 0px 0px 0px; }
+    margin: 25px 0px 15px 0px;
+    font-weight: 300;
+    font-size: 17px; }
   .card .price, .lite .price, .basic .price, .team .price, .pro .price {
     display: flex;
     justify-content: flex-start;
     top: 30px;
     left: 34px;
+    font-weight: 300;
     font-size: 44px; }
+    .card .price p, .lite .price p, .basic .price p, .team .price p, .pro .price p {
+      color: #fff;
+      margin: 27px 0px 10px 5px; }
   .card .hour, .lite .hour, .basic .hour, .team .hour, .pro .hour {
     display: flex;
     justify-content: flex-start;
     top: 35px;
     left: 40px;
     color: #67859E;
-    font-size: 13px; }
+    font-size: 13px;
+    margin-bottom: 38px; }
   .card .hardware, .lite .hardware, .basic .hardware, .team .hardware, .pro .hardware {
     display: flex;
     justify-content: flex-start;
     top: 55px;
     left: 60px;
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 3px; }
+    .card .hardware p, .lite .hardware p, .basic .hardware p, .team .hardware p, .pro .hardware p {
+      margin: 2px 0px 0 5px; }
 
 .lite {
   background-color: #26374C;
@@ -152,6 +176,8 @@ button {
   .lite .icon {
     background-color: #AB7DF6;
     background-image: url(../img/Icon.svg); }
+  .lite h3 {
+    color: #AB7DF6; }
   .lite p {
     font-size: 13px; }
 
@@ -166,6 +192,8 @@ button {
   .basic .icon {
     background-color: #26C1C9;
     background-image: url(../img/Shape.svg); }
+  .basic .card::before, .basic .lite::before, .basic .basic::before, .basic .team::before, .basic .pro::before {
+    background: rgba(0, 0, 0, 0.0592731); }
   .basic p {
     font-size: 13px; }
 
@@ -177,6 +205,8 @@ button {
   .team .icon {
     background-color: #81C926;
     background-image: url(../img/Heart.svg); }
+  .team h3 {
+    color: #81C926; }
   .team p {
     font-size: 13px; }
 
@@ -188,5 +218,13 @@ button {
   .pro .icon {
     background-color: #FACA00;
     background-image: url(../img/message.svg); }
+  .pro h3 {
+    color: #FACA00; }
   .pro p {
     font-size: 13px; }
+
+.borders {
+  width: 1px;
+  background-color: black;
+  height: 106%;
+  float: left; }

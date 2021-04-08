@@ -26,12 +26,13 @@ $ffm: 'Heebo', sans-serif;
     }
 
     position: absolute;
-    top: -25px;
+    top: -22px;
     left: 25px;
     height: 40px;
     width: 40px;
     border: 3px solid #FFFFFF;
     border-radius: 100px;
+    padding: 20px;
 }
 
 %for-card {
@@ -86,6 +87,7 @@ p {
     font-size: $ft-size;
     color: $ft-color;
     text-align: center;
+    margin: 0;
 }
 
 a {
@@ -117,6 +119,7 @@ a {
     align-items: center;
     position: relative;
     border-radius: 8px;
+    margin-bottom: 17px;
 }
 // === / pattern with bg ===
 
@@ -178,6 +181,7 @@ button {
     flex-flow: nowrap;
     justify-content: center;
     align-items: center;
+    margin: 0px 0 33px 0;
 }  
 
 .card {
@@ -192,14 +196,31 @@ button {
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    padding: 21px;
+    padding: 25px;
+    margin: 0 5px;
+
+    &:before {
+    content: ' ';
+    position: inherit;
+    top: 87px;
+    left: 68px;
+    height: 202px;
+    width: 2px;
+    background-color: #fff;
+    transform: rotate(90deg);
+    background: #2C405A;
+    }
 
     h3 {
         display: inline;
         justify-content: flex-start;
         top: 15px;
         left: 34px;
-        margin: 71px 0px 0px 0px;
+        margin: 25px 0px 15px 0px;
+        font: {
+            weight: $fw-regular;
+            size: 17px;
+        }
     }
     
     .price  {
@@ -208,7 +229,12 @@ button {
         top: 30px;
         left: 34px;
         font: {
+            weight: $fw-regular;
             size: 44px;
+        }
+        p {
+            color: $sc-color;
+            margin: 27px 0px 10px 5px;
         }
     }
 
@@ -221,6 +247,7 @@ button {
         font: {
             size: 13px;
         }
+        margin-bottom: 38px;
     }
 
     .hardware {
@@ -231,8 +258,11 @@ button {
         font: {
             size: 15px;
         }
+        margin-top: 3px;
+        p {
+            margin: 2px 0px 0 5px;
+        }
     }
-    margin: 0px 5px;
 }
 
 .lite {
@@ -245,8 +275,10 @@ button {
             image: url(../img/Icon.svg);
         }
     }
-
-        
+    h3 {
+        color: #AB7DF6;
+    }    
+    
     p{
         font-size: $ft-size;
     }
@@ -271,12 +303,14 @@ button {
         
         
     }
-
-        
+    .card::before{
+        background: rgba(0, 0, 0, 0.0592731);
+    }
+    
     p{
         font-size: $ft-size;
     }
-
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -292,12 +326,14 @@ button {
             image: url(../img/Heart.svg)
         }
     }
-
-        
+    h3 {
+        color: #81C926;
+    }
+    
     p{
         font-size: $ft-size;
     }
-
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -314,19 +350,26 @@ button {
             image: url(../img/message.svg)
         }
     }
-
+    h3 {
+        color: #FACA00;
+    }
+    
     p{
         font-size: $ft-size;
     }
-
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 // === / plan cards ===
 
-// === pattern with bg === 
-// === / pattern with bg === 
+.borders {
+    width: 1px;
+    background-color: black;
+    height: 106%;
+    float: left;
+}
 
 
 
