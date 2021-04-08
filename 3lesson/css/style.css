@@ -135,7 +135,8 @@ button {
     justify-content: flex-start;
     top: 35px;
     left: 40px;
-    font-size: 15px; }
+    color: #67859E;
+    font-size: 13px; }
   .card .hardware, .lite .hardware, .basic .hardware, .team .hardware, .pro .hardware {
     display: flex;
     justify-content: flex-start;
