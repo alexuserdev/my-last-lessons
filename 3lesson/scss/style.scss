@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400&display=swap');
+@import url('https:// === nts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap');
 
 // === Mixin ===
 @mixin Heebo {
@@ -7,15 +7,325 @@
 // === / Mixin ===
 
 // === Variables ===
-$fw-thin:200;
 $fw-regular:300;
 $fw-bold:400;
+$ft-size: 13px;
 $bg-color: rgba(#12181E, 0.8);
+$ft-color: #67859E;
+$sc-color: #fff;
+$cd-color: #26374C;
+$ffm: 'Heebo', sans-serif;
 // === / Variables ===
+
+// === Template ===
+%for-icons {
+    background: {
+        size: 18px 18px;
+        position: center;
+        repeat: no-repeat;
+    }
+
+    position: absolute;
+    top: -25px;
+    left: 25px;
+    height: 40px;
+    width: 40px;
+    border: 3px solid #FFFFFF;
+    border-radius: 100px;
+}
+
+%for-card {
+    h3 {
+        display: inline;
+        justify-content: flex-start;
+        top: 15px;
+        left: 34px;
+    }
+}
+
+// === / Template ===
 
 // === Common ===
 body {
-    background-color: $bgcolor;
+    background-color: $bg-color;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    @include Heebo;
+    height: 100vh;
 }
+
+div {
+    color: $sc-color;
+}
+
+h2 {
+    font: {
+        size: 34;
+        weight: $fw-regular;
+    }
+
+    color: $sc-color;
+    text-align: center;
+}
+
+h4 {
+    font: {
+        size: 15px;
+        weight: $fw-regular;
+    }
+    
+    color: #8DABC4;
+    line-height: 22px;
+    text-align: center;
+    width: 415px;
+}
+
+p {
+    font-size: $ft-size;
+    color: $ft-color;
+    text-align: center;
+}
+
+a {
+    font: {
+        size: $ft-size;
+        weight: $fw-regular;
+    }
+
+    color: rgba($sc-color, 0.6);
+    position: relative;
+    display: contents;
+    
+}
+
 // === / Common ===
- 
+
+// === pattern with bg ===
+.pattern {
+    background: {
+        color: #2C405A;
+        image: url(../img/Pattern.svg);
+    }
+
+    width: 914px;
+    height: 640px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+}
+// === / pattern with bg ===
+
+// === button close ===
+.close {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 52px;
+    height: 52px;
+    background-color: #4ECE3D;
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px rgba(32, 33, 35, 0.0899853), 1px 1px 4px rgba(0, 0, 0, 0.152202);
+
+    &:before, &:after {
+        content: ' ';
+        position: inherit;
+        left: 25px;
+        top: 17px;
+        height: 17px;
+        width: 2px;
+        background-color: $sc-color;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+// === / button close === 
+
+// === text and button === 
+
+button {
+    font: {
+        size: 15px;
+        weight: $fw-bold;
+        family: $ffm 
+    }
+    width: 187px;
+    height: 42px;
+    margin-bottom: 58px;
+    outline: none;
+    background-color: #0093EE;
+    color: $sc-color;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    box-shadow: inset -1px 1px 0px rgba(255, 255, 255, 0.0001);
+}
+// === / text and button === 
+
+// === plan cards ===
+.cards {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+}  
+
+.card {
+    width: 206px;
+    height: 270px;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.0409307);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.172809), inset 0px -1px 0px rgba(255, 255, 255, 0.0760586);
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 21px;
+
+    h3 {
+        display: inline;
+        justify-content: flex-start;
+        top: 15px;
+        left: 34px;
+        margin: 71px 0px 0px 0px;
+    }
+    
+    .price  {
+        display: flex;
+        justify-content: flex-start;
+        top: 30px;
+        left: 34px;
+        font: {
+            size: 44px;
+        }
+    }
+
+    .hour {
+        display: flex;
+        justify-content: flex-start;
+        top: 35px;
+        left: 40px;
+        font: {
+            size: 15px;
+        }
+    }
+
+    .hardware {
+        display: flex;
+        justify-content: flex-start;
+        top: 55px;
+        left: 60px;
+        font: {
+            size: 15px;
+        }
+    }
+    margin: 0px 5px;
+}
+
+.lite {
+    @extend .card;
+    background-color: $cd-color;
+    .icon {
+        @extend %for-icons;
+        background: {
+            color: #AB7DF6;
+            image: url(../img/Icon.svg);
+        }
+    }
+
+        
+    p{
+        font-size: $ft-size;
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.basic {
+    @extend .card;
+    background-color: #26C1C9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    border-radius: 4px;
+    .icon {
+        @extend %for-icons;
+        background: {
+            color: #26C1C9;
+            image: url(../img/Shape.svg);
+        }
+        
+        
+    }
+
+        
+    p{
+        font-size: $ft-size;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.team {
+    @extend .card;
+    background-color: $cd-color;
+    .icon {
+        @extend %for-icons;
+        background: {
+            color: #81C926;
+            image: url(../img/Heart.svg)
+        }
+    }
+
+        
+    p{
+        font-size: $ft-size;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.pro {
+    @extend .card;
+    background-color: $cd-color;
+    .icon {
+        @extend %for-icons;
+        background: {
+            color: #FACA00;
+            image: url(../img/message.svg)
+        }
+    }
+
+    p{
+        font-size: $ft-size;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+// === / plan cards ===
+
+// === pattern with bg === 
+// === / pattern with bg === 
+
+
+

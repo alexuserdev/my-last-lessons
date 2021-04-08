@@ -1,2 +1,191 @@
+@import url("https:// === nts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap");
+.lite .icon, .basic .icon, .team .icon, .pro .icon {
+  background-size: 18px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  height: 40px;
+  width: 40px;
+  border: 3px solid #FFFFFF;
+  border-radius: 100px; }
+
 body {
-  background-color: rgba(18, 24, 30, 0.8); }
+  background-color: rgba(18, 24, 30, 0.8);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', sans-serif;
+  height: 100vh; }
+
+div {
+  color: #fff; }
+
+h2 {
+  font-size: 34;
+  font-weight: 300;
+  color: #fff;
+  text-align: center; }
+
+h4 {
+  font-size: 15px;
+  font-weight: 300;
+  color: #8DABC4;
+  line-height: 22px;
+  text-align: center;
+  width: 415px; }
+
+p {
+  font-size: 13px;
+  color: #67859E;
+  text-align: center; }
+
+a {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: contents; }
+
+.pattern {
+  background-color: #2C405A;
+  background-image: url(../img/Pattern.svg);
+  width: 914px;
+  height: 640px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 8px; }
+
+.close {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  width: 52px;
+  height: 52px;
+  background-color: #4ECE3D;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 100px;
+  box-shadow: 1px 1px 1px rgba(32, 33, 35, 0.0899853), 1px 1px 4px rgba(0, 0, 0, 0.152202); }
+  .close:before, .close:after {
+    content: ' ';
+    position: inherit;
+    left: 25px;
+    top: 17px;
+    height: 17px;
+    width: 2px;
+    background-color: #fff; }
+  .close:before {
+    transform: rotate(45deg); }
+  .close::after {
+    transform: rotate(-45deg); }
+
+button {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Heebo", sans-serif;
+  width: 187px;
+  height: 42px;
+  margin-bottom: 58px;
+  outline: none;
+  background-color: #0093EE;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: inset -1px 1px 0px rgba(255, 255, 255, 0.0001); }
+
+.cards {
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.card, .lite, .basic, .team, .pro {
+  width: 206px;
+  height: 270px;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.0409307);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.172809), inset 0px -1px 0px rgba(255, 255, 255, 0.0760586);
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 21px;
+  margin: 0px 5px; }
+  .card h3, .lite h3, .basic h3, .team h3, .pro h3 {
+    display: inline;
+    justify-content: flex-start;
+    top: 15px;
+    left: 34px;
+    margin: 71px 0px 0px 0px; }
+  .card .price, .lite .price, .basic .price, .team .price, .pro .price {
+    display: flex;
+    justify-content: flex-start;
+    top: 30px;
+    left: 34px;
+    font-size: 44px; }
+  .card .hour, .lite .hour, .basic .hour, .team .hour, .pro .hour {
+    display: flex;
+    justify-content: flex-start;
+    top: 35px;
+    left: 40px;
+    font-size: 15px; }
+  .card .hardware, .lite .hardware, .basic .hardware, .team .hardware, .pro .hardware {
+    display: flex;
+    justify-content: flex-start;
+    top: 55px;
+    left: 60px;
+    font-size: 15px; }
+
+.lite {
+  background-color: #26374C;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .lite .icon {
+    background-color: #AB7DF6;
+    background-image: url(../img/Icon.svg); }
+  .lite p {
+    font-size: 13px; }
+
+.basic {
+  background-color: #26C1C9;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .basic .icon {
+    background-color: #26C1C9;
+    background-image: url(../img/Shape.svg); }
+  .basic p {
+    font-size: 13px; }
+
+.team {
+  background-color: #26374C;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .team .icon {
+    background-color: #81C926;
+    background-image: url(../img/Heart.svg); }
+  .team p {
+    font-size: 13px; }
+
+.pro {
+  background-color: #26374C;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .pro .icon {
+    background-color: #FACA00;
+    background-image: url(../img/message.svg); }
+  .pro p {
+    font-size: 13px; }
