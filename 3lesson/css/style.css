@@ -56,6 +56,8 @@ a {
   background-image: url(../img/Pattern.svg);
   width: 914px;
   height: 640px;
+  max-width: 76vw;
+  max-height: 84vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -63,6 +65,9 @@ a {
   position: relative;
   border-radius: 8px;
   margin-bottom: 17px; }
+  @media (max-width: 910px) {
+    .pattern {
+      height: auto; } }
 
 .close {
   position: absolute;
@@ -103,7 +108,7 @@ button {
 
 .cards {
   display: flex;
-  flex-flow: nowrap;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   margin: 0px 0 33px 0; }
@@ -167,6 +172,10 @@ button {
     margin-top: 3px; }
     .card .hardware p, .lite .hardware p, .basic .hardware p, .team .hardware p, .pro .hardware p {
       margin: 2px 0px 0 5px; }
+
+@media (max-width: 1137px) {
+  .card, .lite, .basic, .team, .pro {
+    margin: 0 calc((100%-206px*2)/4); } }
 
 .lite {
   background-color: #26374C;

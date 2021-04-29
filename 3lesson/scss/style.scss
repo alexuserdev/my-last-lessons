@@ -113,6 +113,8 @@ a {
 
     width: 914px;
     height: 640px;
+    max-width: 76vw;
+    max-height: 84vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -120,6 +122,14 @@ a {
     position: relative;
     border-radius: 8px;
     margin-bottom: 17px;
+
+    @media (max-width: 910px) {
+            height: auto;
+            
+    }
+
+    
+
 }
 // === / pattern with bg ===
 
@@ -178,7 +188,7 @@ button {
 // === plan cards ===
 .cards {
     display: flex;
-    flex-flow: nowrap;
+    flex-flow: wrap;
     justify-content: center;
     align-items: center;
     margin: 0px 0 33px 0;
@@ -198,7 +208,7 @@ button {
     box-sizing: border-box;
     padding: 25px;
     margin: 0 5px;
-
+    
     &:before {
     content: ' ';
     position: inherit;
@@ -263,6 +273,14 @@ button {
             margin: 2px 0px 0 5px;
         }
     }
+ 
+}
+
+@media (max-width: 1137px) {
+    .card {
+        margin: 0 calc((100%-206px*2)/4)
+    }
+    
 }
 
 .lite {
